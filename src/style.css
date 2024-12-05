@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #6366F1; /* New Indigo shade */
+  --secondary-color: #FCD34D; /* Soft Amber */
+  --danger-color: #F87171; /* Light Red */
+  --background-color: #F9FAFB; /* Light Gray Background */
+  --card-background-color: #FFFFFF; /* White */
+  --text-color: #111827; /* Darker Text */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6, p, input, button, span, li {
+  font-size: 1rem; /* Consistent Font Size */
+  color: var(--text-color);
+  line-height: 1.25;
+}
+
+button, input {
+  border-radius: 9999px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s;
+  font-weight: 500;
+  padding: 0.6em 1.5em;
+  font-family: inherit;
+  border: 1px solid var(--primary-color);
+  background-color: var(--card-background-color);
+  outline: none;
+}
+
+button:active, input:focus {
+  transform: scale(0.96);
+}
+
+button:hover, input:hover {
+  opacity: 0.95;
+}
+
+.bg-card {
+  background-color: var(--card-background-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+.modal {
+  background-color: var(--card-background-color);
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+}
+
+.checkbox {
+  accent-color: var(--primary-color);
+}
+
+.section-title {
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.list-item {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.list-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.steps-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .modal {
+    width: 80%;
+  }
+}
